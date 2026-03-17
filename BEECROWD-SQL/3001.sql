@@ -1,0 +1,9 @@
+SELECT 
+    name,
+    CASE 
+        WHEN type = 'A' THEN price + 20.0
+        WHEN type = 'B' THEN price + 70.0
+        WHEN type = 'C' THEN price + 530.5
+    END AS price
+FROM products
+ORDER BY type ASC, id DESC;
